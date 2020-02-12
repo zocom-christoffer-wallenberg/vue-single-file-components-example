@@ -1,7 +1,8 @@
 <template>
     <div class="wrapper">
         <h1>{{ message }}</h1>
-        <CharacterName name="Hermione Granger" />
+        <input type="text" v-model="text" placeholder="Enter lastname">
+        <CharacterName firstName="Hermione" v-bind:lastName="text"  />
     </div>
 </template>
 
@@ -15,7 +16,8 @@ export default {
     data: () => {
         return {
             message: "Stop, stop stop! You're going to take someone's eye out. Besides, you're saying it wrong." +
-        " It's Levi-o-sa, not Levio-sar."
+        " It's Levi-o-sa, not Levio-sar.",
+            text: '' 
         }
     }
 }

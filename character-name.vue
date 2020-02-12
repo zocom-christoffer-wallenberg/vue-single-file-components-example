@@ -1,7 +1,7 @@
 <template>
   <article>
-      <h2> - {{ name }}</h2>
-      <input type="text" v-model="text" placeholder="How said it?">
+      <h2> - {{ firstName }} {{ lastName }} </h2>
+      <input type="text" v-model="text" placeholder="Who said it?">
       <p> {{ text }} </p>
       <button v-on:click="answer">Answer</button>
   </article>
@@ -10,7 +10,8 @@
 <script>
 export default {
     props: {
-        name: String
+        firstName: String,
+        lastName: String
     },
     data: () => {
         return {
